@@ -11,7 +11,7 @@ const Search = ({onSearchChange}) =>{
             console.log(geoApiOptions)
             const response = await fetch(`${GEO_API_URL}/cities?minpopulation=100000&namePrefix=${inputValue}`, geoApiOptions)
             const result = await response.json()
-
+           
             return {
                             options : result.data.map((city)=>{
                                 return{

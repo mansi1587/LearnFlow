@@ -43,7 +43,7 @@ function App() {
       .then(async (response) => {
         const weatherResponse = await response[0].json();
         const forcastResponse = await response[1].json();
-
+           
         setCurrentWeather({ city: searchData.label, ...weatherResponse });
         setForecast({ city: searchData.label, ...forcastResponse });
       })
